@@ -40,7 +40,7 @@ class ModelTrainer:
                 yaml.dump(config, f)
 
             os.system(
-                f"cd yolov5/ && python train.py --img 416 --batch {self.model_trainer_config.batch_size} --epochs {self.model_trainer_config.no_epochs} --data ../data.yaml --cfg ./models/custom_yolov5s.yaml --weights {self.model_trainer_config.weight_name} --name yolov5s_results  --cache")
+                f"cd yolov5/ && python train.py --img 416 --batch {self.model_trainer_config.batch_size} --epochs {self.model_trainer_config.no_epochs} --data ../data.yaml --cfg ./models/custom_yolov5s.yaml --weights {self.model_trainer_config.weight_name} --name yolov5s_results  --cache disk")
             os.system(
                 "cp yolov5/runs/train/yolov5s_results/weights/best.pt yolov5/")
             os.makedirs(
