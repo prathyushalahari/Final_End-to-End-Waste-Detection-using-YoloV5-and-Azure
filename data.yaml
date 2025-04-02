@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
+
+roboflow:
+  workspace: polygence-project
+  project: images-pyjqf
+  version: 20
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/polygence-project/images-pyjqf/dataset/20
